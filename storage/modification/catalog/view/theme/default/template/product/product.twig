@@ -285,16 +285,7 @@
             {% endif %}
             <div class="form-group">
               <label class="control-label" for="input-quantity">{{ entry_qty }}</label>
-<div class="input-group number-spinner">
-			      <span class="input-group-btn">
-					<button class="btn btn-default" data-dir="dwn"><i class="fa fa-minus"></i></button>
-			      </span>
-				<input type="text" name="quantity" value="{{ minimum }}" id="input-quantity" class="form-control text-center" />
-				  <span class="input-group-btn">
-					<button class="btn btn-default" data-dir="up"><i class="fa fa-plus"></i></button>
-				  </span>
-			    </div>
-              
+              <input type="text" name="quantity" value="{{ minimum }}" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="{{ product_id }}" />
               <br />
               <button type="button" id="button-cart" data-loading-text="{{ text_loading }}" class="btn btn-primary btn-lg btn-block">{{ button_cart }}</button>
@@ -302,69 +293,6 @@
             {% if minimum > 1 %}
             <div class="alert alert-info"><i class="fa fa-info-circle"></i> {{ text_minimum }}</div>
             {% endif %}</div>
-
-            <div id="oneclick" >
-              <h3><span class="glyphicon glyphicon-phone"></span>{{ text_one_click_header }}</h3>
-              <div class="input-group">
-				<input type="text" name="telephone" value="" placeholder="{{ text_one_click_placeholder }}" id="input-payment-telephone" class="form-control">
-				<input type="hidden" name="product_id" value="{{ product_id }}">
-                <span class="input-group-btn">
-                    <button type="submit" id="button-oneclick" class="btn btn-primary">{{ text_one_click_button }}</button>
-                </span>
-              </div>
-			  <span class="help-block">{{ text_one_click_help }}</span>	
-            </div>
-			<script src="catalog/view/javascript/jquery.maskedinput.min.js" type="text/javascript"></script>
-            <script type="text/javascript">
-                $(document).ready(function() {
-					$("#input-payment-telephone").mask("{{ text_one_click_mask }}",{placeholder:" "});
-				});
-            </script>
-
-			<script type="text/javascript"><!--
-			$('#button-oneclick').on('click', function() {
-				$.ajax({
-					url: 'index.php?route=checkout/one_click/add',
-					type: 'post',
-					data: $('#oneclick input[type=\'text\'], #oneclick input[type=\'hidden\']'),
-					dataType: 'json',
-					beforeSend: function() {
-						$('#button-oneclick').button('loading');
-					},
-					complete: function() {
-						$('#button-oneclick').button('reset');
-					},
-					success: function(json) {
-						$('.alert, .text-danger').remove();
-						$('.form-group').removeClass('has-error');
-
-						if (json['error']) {
-							if (json['error']['telephone']) {
-								$('.breadcrumb').after('<div class="alert alert-danger text-danger">' + json['error']['telephone'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-								$('html, body').animate({ scrollTop: 0 }, 'slow');
-							}
-							if (json['error']['product']) {
-								$('.breadcrumb').after('<div class="alert alert-danger text-danger">' + json['error']['product'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-								$('html, body').animate({ scrollTop: 0 }, 'slow');
-							}
-							if (json['error']['order']) {
-								$('.breadcrumb').after('<div class="alert alert-danger text-danger">' + json['error']['order'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-								$('html, body').animate({ scrollTop: 0 }, 'slow');
-							}
-						}
-
-						if (json['success']) {
-							$('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-							$('html, body').animate({ scrollTop: 0 }, 'slow');
-						}
-					},
-			        error: function(xhr, ajaxOptions, thrownError) {
-			            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-			        }
-				});
-			});
-			//--></script>
-        
           {% if review_status %}
           <div class="rating">
             <p>{% for i in 1..5 %}
@@ -629,22 +557,4 @@ $(document).ready(function() {
 	});
 });
 //--></script> 
-<script type="text/javascript"><!--
-$(document).on('click', '.number-spinner button', function () {    
-	var btn = $(this),
-		oldValue = btn.closest('.number-spinner').find('input').val().trim(),
-		newVal = 1;
-			
-	if (btn.attr('data-dir') == 'up') {
-		newVal = parseInt(oldValue) + 1;
-	} else {
-		if (oldValue > 1) {
-			newVal = parseInt(oldValue) - 1;
-		} else {
-			newVal = 1;
-		}
-	}
-	btn.closest('.number-spinner').find('input').val(newVal);
-});
-//--></script>
 {{ footer }} 

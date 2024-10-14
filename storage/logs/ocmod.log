@@ -1,4 +1,4 @@
-2024-10-14 12:15:29 - MOD: Modification Default
+2024-10-14 11:02:56 - MOD: Modification Default
 
 FILE: system/engine/action.php
 REGEX: ~(require|include)(_once)?\(([^)]+)~
@@ -76,36 +76,6 @@ LINE: 221
 FILE: admin/model/customer/customer.php
 CODE: public function getTotalCustomers($data = array()) {
 LINE: 311
-----------------------------------------------------------------
-MOD: DEV-OPENCART.COM - Заказ в 1 клик для Opencart 3.x
-
-FILE: catalog/language/ru-ru/product/product.php
-CODE: // Entry
-LINE: 45
-
-FILE: catalog/view/theme/default/template/product/product.twig
-CODE: {% if review_status %}
-LINE: 348
-
-FILE: catalog/language/en-gb/common/footer.php
-CODE: http://opencart.pro/
-NOT FOUND - OPERATIONS ABORTED!
-
-FILE: catalog/language/ru-ru/common/footer.php
-CODE: http://opencart.pro/
-NOT FOUND - OPERATIONS ABORTED!
-CODE: http://myopencart.com/
-NOT FOUND - OPERATIONS ABORTED!
-CODE: http://myopencart.com/
-NOT FOUND - OPERATIONS ABORTED!
-CODE: http://www.opencart.com
-NOT FOUND - OPERATIONS ABORTED!
-CODE: http://www.opencart.com
-NOT FOUND - OPERATIONS ABORTED!
-CODE: http://lowenet.biz/
-NOT FOUND - OPERATIONS ABORTED!
-CODE: http://lowenet.biz/
-NOT FOUND - OPERATIONS ABORTED!
 ----------------------------------------------------------------
 MOD: DEV-OPENCART.COM - Кнопка "Применить" в админке
 
@@ -998,9 +968,11 @@ NOT FOUND - OPERATION SKIPPED!
 
 FILE: catalog/view/theme/default/template/common/footer.twig
 CODE: </body>
-LINE: 53
+LINE: 54
 CODE: http://opencart.pro/
 NOT FOUND - OPERATIONS ABORTED!
+
+FILE: catalog/language/ru-ru/common/footer.php
 CODE: http://opencart.pro/
 NOT FOUND - OPERATIONS ABORTED!
 CODE: http://myopencart.com/
@@ -1098,7 +1070,7 @@ NOT FOUND - OPERATIONS ABORTED!
 ----------------------------------------------------------------
 MOD: DEV-OPENCART.COM — Автозаполнение SEO URL
 CODE: </body>
-LINE: 38
+LINE: 11
 CODE: name="product_description[{{ language.language_id }}][name]"
 LINE: 58
 CODE: name="category_description[{{ language.language_id }}][name]"
@@ -1149,6 +1121,8 @@ CODE: {% for i,breadcrumb in breadcrumbs %}
 NOT FOUND - OPERATION SKIPPED!
 CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
 NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/product/product.twig
 CODE: class="breadcrumb
 LINE: 2
 CODE: {% for breadcrumb in breadcrumbs %}
@@ -2084,7 +2058,7 @@ LINE: 91
 CODE: src="{{ product.thumb }}"
 NOT FOUND - OPERATIONS ABORTED!
 CODE: src="{{ product.thumb }}"
-LINE: 384
+LINE: 321
 CODE: src="{{ product.thumb }}"
 NOT FOUND - OPERATIONS ABORTED!
 CODE: src="{{ product.thumb }}"
@@ -2145,14 +2119,6 @@ CODE: src="{{ product.thumb }}"
 LINE: 6
 CODE: src="{{ product.thumb }}"
 NOT FOUND - OPERATIONS ABORTED!
-----------------------------------------------------------------
-MOD: Кнопки переключения количества
-CODE: <label class="control-label" for="input-quantity">{{ entry_qty }}</label>
-LINE: 295
-CODE: <input type="text" name="quantity" value="{{ minimum }}" size="2" id="input-quantity" class="form-control" />
-LINE: 296
-CODE: {{ footer }}
-LINE: 649
 ----------------------------------------------------------------
 MOD: Массовое удаление заказов
 

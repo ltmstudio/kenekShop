@@ -14,6 +14,10 @@
 /upload/system/storage/cache/*
 !/upload/system/storage/cache/index.html
 
+# Storage cache
+/storage/cache/*
+!/storage/cache/index.html
+
 # Templates Files
 /upload/image/templates/*
 /upload/image/templates/default.jpg

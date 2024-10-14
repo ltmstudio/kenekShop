@@ -1,0 +1,1 @@
+2024-10-14 12:37:28 - PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'kenek' in C:\OSPanel\domains\kenekShop\opencart\system\library\db\mysqli.php on line 7

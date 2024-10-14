@@ -1,4 +1,4 @@
-2024-10-12 5:58:51 - MOD: Modification Default
+2024-10-14 7:27:49 - MOD: Modification Default
 
 FILE: system/engine/action.php
 REGEX: ~(require|include)(_once)?\(([^)]+)~
@@ -38,6 +38,36 @@ MOD: 2 simple url rewrite
 FILE: catalog/controller/startup/startup.php
 CODE: $this->registry->set('url'
 LINE: 47
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM - Заказ в 1 клик для Opencart 3.x
+
+FILE: catalog/language/ru-ru/product/product.php
+CODE: // Entry
+LINE: 45
+
+FILE: catalog/view/theme/default/template/product/product.twig
+CODE: {% if review_status %}
+LINE: 348
+
+FILE: catalog/language/en-gb/common/footer.php
+CODE: http://opencart.pro/
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: catalog/language/ru-ru/common/footer.php
+CODE: http://opencart.pro/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://myopencart.com/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://myopencart.com/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://www.opencart.com
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://www.opencart.com
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://lowenet.biz/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://lowenet.biz/
+NOT FOUND - OPERATIONS ABORTED!
 ----------------------------------------------------------------
 MOD: DEV-OPENCART.COM - Кнопка "Применить" в админке
 
@@ -375,7 +405,9 @@ LINE: 33
 
 FILE: admin/view/template/extension/module/blog_latest.twig
 CODE: <i class="fa fa-save"></i></button>
-NOT FOUND - OPERATIONS ABORTED!
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
 
 FILE: admin/view/template/extension/module/cache_cleaner.twig
 CODE: <i class="fa fa-save"></i></button>
@@ -397,7 +429,9 @@ LINE: 33
 
 FILE: admin/view/template/extension/module/featured.twig
 CODE: <i class="fa fa-save"></i></button>
-NOT FOUND - OPERATIONS ABORTED!
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
 
 FILE: admin/view/template/extension/module/featured_article.twig
 CODE: <i class="fa fa-save"></i></button>
@@ -467,7 +501,9 @@ LINE: 33
 
 FILE: admin/view/template/extension/module/slideshow.twig
 CODE: <i class="fa fa-save"></i></button>
-NOT FOUND - OPERATIONS ABORTED!
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
 
 FILE: admin/view/template/extension/module/special.twig
 CODE: <i class="fa fa-save"></i></button>
@@ -480,6 +516,10 @@ CODE: <i class="fa fa-save"></i></button>
 LINE: 8
 CODE: <div class="form-group">
 LINE: 33
+
+FILE: admin/view/template/extension/module/truefilemanager_for_oc3.twig
+CODE: <i class="fa fa-save"></i></button>
+NOT FOUND - OPERATIONS ABORTED!
 
 FILE: admin/view/template/extension/module/webp.twig
 CODE: <i class="fa fa-save"></i></button>
@@ -900,9 +940,9 @@ LINE: 58
 
 FILE: admin/view/template/common/header.twig
 CODE: <ul class="nav navbar-nav navbar-right">
-NOT FOUND - OPERATIONS ABORTED!
+LINE: 109
 CODE: <ul class="nav navbar-nav navbar-right">
-NOT FOUND - OPERATIONS ABORTED!
+LINE: 212
 
 FILE: admin/view/template/common/footer.twig
 CODE: <footer id="footer">{{ text_footer }}<br />{{ text_version }}</footer></div>
@@ -913,12 +953,8 @@ NOT FOUND - OPERATION SKIPPED!
 FILE: catalog/view/theme/default/template/common/footer.twig
 CODE: </body>
 LINE: 54
-
-FILE: catalog/language/en-gb/common/footer.php
 CODE: http://opencart.pro/
 NOT FOUND - OPERATIONS ABORTED!
-
-FILE: catalog/language/ru-ru/common/footer.php
 CODE: http://opencart.pro/
 NOT FOUND - OPERATIONS ABORTED!
 CODE: http://myopencart.com/
@@ -938,4 +974,1141 @@ MOD: DEV-OPENCART.COM - Рекомендуемые товары Плюс
 CODE: if (isset($this->request->post['status']))
 LINE: 237
 CODE: <div class="form-group">
-NOT FOUND - ABORTING!
+LINE: 72
+
+FILE: catalog/controller/extension/module/featured.php
+CODE: $products =
+LINE: 30
+
+FILE: admin/language/en-gb/extension/module/featured.php
+CODE: <?php
+LINE: 6
+
+FILE: admin/language/ru-ru/extension/module/featured.php
+CODE: <?php
+LINE: 6
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM - Файловый менеджер (True) + Редактор изображений
+CODE: </head>
+LINE: 40
+CODE: </body>
+LINE: 31
+
+FILE: admin/controller/common/filemanager.php
+CODE: class ControllerCommonFileManager extends Controller {
+LINE: 3
+CODE: class ControllerCommonFileManager extends Controller {
+LINE: 3
+CODE: </body>
+LINE: 54
+CODE: http://opencart.pro/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://opencart.pro/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://myopencart.com/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://myopencart.com/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://www.opencart.com
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://www.opencart.com
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://lowenet.biz/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://lowenet.biz/
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM —  Localcopy (Загрузка без настроек FTP)
+
+FILE: admin/controller/marketplace/install.php
+CODE: if ($safe) {
+LINE: 165
+CODE: if (is_dir($file) && !is_dir($path)) {
+LINE: 221
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM — WebP Image
+
+FILE: catalog/model/tool/image.php
+CODE: ModelToolImage
+LINE: 21
+CODE: $image_new = str_replace('
+LINE: 92
+CODE: http://opencart.pro/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://opencart.pro/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://myopencart.com/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://myopencart.com/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://www.opencart.com
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://www.opencart.com
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://lowenet.biz/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://lowenet.biz/
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM — Автозаполнение SEO URL
+CODE: </body>
+LINE: 38
+CODE: name="product_description[{{ language.language_id }}][name]"
+LINE: 58
+CODE: name="category_description[{{ language.language_id }}][name]"
+LINE: 53
+CODE: name="name"
+LINE: 44
+CODE: name="information_description[{{ language.language_id }}][title]"
+LINE: 50
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM — Исправленные хлебные крошки
+
+FILE: catalog/view/theme/default/template/product/category.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/product/compare.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/product/manufacturer_info.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/product/manufacturer_list.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/product/review.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/product/search.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/product/special.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/information/contact.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/information/information.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/information/sitemap.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/account.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/address_form.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/address_list.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/affiliate.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/download.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/edit.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/forgotten.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/login.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/newsletter.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/order_info.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/order_list.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/password.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/recurring_info.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/recurring_list.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/register.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/reset.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/return_form.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/return_info.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/return_list.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/reward.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/simpleaddress.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/simpleedit.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/simpleregister.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/tracking.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/transaction.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/voucher.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/account/wishlist.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/affiliate/login.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/affiliate/register.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/cart.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/checkout.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/confirm.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/guest.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/guest_shipping.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/login.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/payment_address.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/payment_method.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/register.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/shipping_address.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/shipping_method.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_cart.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_comment.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_customer.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_login.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_payment.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_payment_address.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_shipping.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_shipping_address.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_summary.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/checkout/simplecheckout_text.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/error/not_found.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/blog/article.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/blog/category.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/blog/latest.twig
+CODE: class="breadcrumb
+LINE: 2
+CODE: {% for breadcrumb in breadcrumbs %}
+LINE: 3
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/blog/menu.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/blog/review.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/account.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/banner(orig).twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/banner.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/bestseller(orig).twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/bestseller.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/blog_category.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/blog_featured.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/blog_latest(orig).twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/blog_latest.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/carousel.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/category.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/featured(orig).twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/featured.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/featured_article.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/featured_product.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/filter.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/google_hangouts.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/html.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/information.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/latest(orig).twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/latest.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/simple.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/slideshow(orig).twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/slideshow.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/special.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/extension/module/store.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/language/en-gb/en-gb.php
+CODE: $_['text_home']             = '<i class="fa fa-home"></i>';
+LINE: 12
+
+FILE: catalog/language/ru-ru/ru-ru.php
+CODE: $_['text_home']             = '<i class="fa fa-home"></i>';
+LINE: 15
+CODE: $_['text_home'] = '<i class="fa fa-home"></i>';
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/controller/product/product.php
+CODE: public function index() {
+LINE: 25
+CODE: if ($product_info) {
+LINE: 219
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM — Ленивая загрузка изображений Native LazyLoad
+CODE: src="{{ product.thumb }}"
+LINE: 140
+CODE: src="{{ product.thumb }}"
+LINE: 48
+CODE: src="{{ product.thumb }}"
+LINE: 91
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+LINE: 384
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+LINE: 125
+CODE: src="{{ product.thumb }}"
+LINE: 82
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+LINE: 6
+CODE: src="{{ product.thumb }}"
+LINE: 9
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+LINE: 6
+CODE: src="{{ product.thumb }}"
+LINE: 9
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+LINE: 6
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+LINE: 6
+CODE: src="{{ product.thumb }}"
+LINE: 9
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+CODE: src="{{ product.thumb }}"
+LINE: 6
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: Кнопки переключения количества
+CODE: <label class="control-label" for="input-quantity">{{ entry_qty }}</label>
+LINE: 295
+CODE: <input type="text" name="quantity" value="{{ minimum }}" size="2" id="input-quantity" class="form-control" />
+LINE: 296
+CODE: {{ footer }}
+LINE: 649
+----------------------------------------------------------------
+MOD: Массовое удаление заказов
+
+FILE: admin/view/template/sale/order_list.twig
+CODE: <a href="{{ add }}" data-toggle="tooltip" title="{{ button_add }}" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+LINE: 13
+CODE: {{ footer }}
+LINE: 321
+CODE: $data['delete'] = str_replace('&amp;', '&', $this->url->link('sale/order/delete', 'user_token=' . $this->session->data['user_token'] . $url, true));
+LINE: 267
+CODE: public function delete() {
+LINE: 82
+
+FILE: admin/model/sale/order.php
+CODE: public function getOrder($order_id) {
+LINE: 21
+----------------------------------------------------------------

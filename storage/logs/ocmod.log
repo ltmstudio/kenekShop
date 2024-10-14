@@ -1,0 +1,941 @@
+2024-10-12 5:58:51 - MOD: Modification Default
+
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 69
+
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 77
+LINE: 151
+LINE: 168
+
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 59
+
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 67
+LINE: 73
+
+FILE: system/library/template/template.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+
+FILE: system/library/template/twig.php
+CODE: if (is_file($file)) {
+LINE: 13
+----------------------------------------------------------------
+MOD: Fix for twig
+CODE: $loader = new \Twig_Loader_Array(array($filename . '.twig' => $code));
+NOT FOUND - OPERATION SKIPPED!
+CODE: $loader = new \Twig\Loader\ArrayLoader(array($filename . '.twig' => $code));
+LINE: 34
+----------------------------------------------------------------
+MOD: 2 simple url rewrite
+
+FILE: catalog/controller/startup/startup.php
+CODE: $this->registry->set('url'
+LINE: 47
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM - Кнопка "Применить" в админке
+
+FILE: admin/language/en-gb/en-gb.php
+CODE: $_['button_delete']
+LINE: 37
+
+FILE: admin/language/ru-ru/ru-ru.php
+CODE: $_['button_delete']
+LINE: 40
+
+FILE: admin/view/template/blog/article_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/blog/category_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/blog/review_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/catalog/attribute_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/catalog/attribute_group_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/catalog/category_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/catalog/download_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/catalog/filter_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/catalog/information_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/catalog/manufacturer_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/catalog/option_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/catalog/product_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/catalog/recurring_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 33
+
+FILE: admin/view/template/catalog/review_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/customer/custom_field_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/customer/customer_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/customer/customer_group_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/design/banner_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/design/layout_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/design/seo_url_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/design/translation_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/country_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/currency_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 33
+
+FILE: admin/view/template/localisation/geo_zone_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/localisation/language_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/length_class_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/location_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/order_status_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/return_action_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/return_reason_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/return_status_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/stock_status_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/tax_class_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/localisation/tax_rate_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/localisation/weight_class_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/localisation/zone_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/marketing/coupon_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/marketing/marketing_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/marketplace/modification_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 9
+CODE: class="form-horizontal">
+LINE: 33
+
+FILE: admin/view/template/sale/order_form.twig
+CODE: <i class="fa fa-save"></i></button>
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/sale/return_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 40
+
+FILE: admin/view/template/sale/voucher_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 11
+CODE: class="form-horizontal">
+LINE: 35
+
+FILE: admin/view/template/sale/voucher_theme_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/setting/store_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 37
+
+FILE: admin/view/template/user/api_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 31
+
+FILE: admin/view/template/user/user_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/user/user_group_form.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 32
+
+FILE: admin/view/template/setting/setting.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: class="form-horizontal">
+LINE: 36
+
+FILE: admin/view/template/extension/module/account.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/amazon_login.twig
+CODE: <i class="fa fa-save"></i></button>
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/extension/module/amazon_pay.twig
+CODE: <i class="fa fa-save"></i></button>
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/extension/module/banner.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/bestseller.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/blog_category.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/blog_featured.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/blog_latest.twig
+CODE: <i class="fa fa-save"></i></button>
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/extension/module/cache_cleaner.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 9
+CODE: <div class="form-group">
+LINE: 41
+
+FILE: admin/view/template/extension/module/carousel.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/category.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/featured.twig
+CODE: <i class="fa fa-save"></i></button>
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/extension/module/featured_article.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 34
+
+FILE: admin/view/template/extension/module/featured_product.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 34
+
+FILE: admin/view/template/extension/module/filter.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/google_hangouts.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 43
+
+FILE: admin/view/template/extension/module/html.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/information.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/latest.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/laybuy_layout.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/live_search.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 34
+
+FILE: admin/view/template/extension/module/paypal_smart_button.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 43
+
+FILE: admin/view/template/extension/module/pilibaba_button.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/slideshow.twig
+CODE: <i class="fa fa-save"></i></button>
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/extension/module/special.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/store.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
+FILE: admin/view/template/extension/module/webp.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 42
+
+FILE: admin/controller/catalog/attribute.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/catalog/attribute_group.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/catalog/category.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 105
+LINE: 197
+LINE: 291
+LINE: 383
+LINE: 921
+LINE: 1005
+
+FILE: admin/controller/catalog/download.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/catalog/filter.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/catalog/information.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 103
+LINE: 195
+LINE: 289
+LINE: 747
+LINE: 831
+
+FILE: admin/controller/catalog/manufacturer.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 103
+LINE: 195
+LINE: 289
+
+FILE: admin/controller/catalog/option.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/catalog/product.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 154
+LINE: 305
+LINE: 450
+LINE: 595
+LINE: 1990
+LINE: 2073
+
+FILE: admin/controller/catalog/recurring.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+LINE: 380
+
+FILE: admin/controller/catalog/review.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 119
+LINE: 227
+LINE: 337
+LINE: 832
+LINE: 921
+
+FILE: admin/controller/customer/custom_field.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/customer/customer.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 124
+LINE: 240
+LINE: 358
+LINE: 474
+
+FILE: admin/controller/customer/customer_approval.php
+CODE: $this->response->redirect($this->url->link(
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/controller/customer/customer_group.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/design/banner.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/design/layout.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 103
+LINE: 198
+LINE: 292
+
+FILE: admin/controller/design/seo_url.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 116
+LINE: 224
+LINE: 334
+
+FILE: admin/controller/design/theme.php
+CODE: $this->response->redirect($this->url->link(
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/controller/design/translation.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/country.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/currency.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+LINE: 378
+
+FILE: admin/controller/localisation/geo_zone.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/language.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/length_class.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/location.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/order_status.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/return_action.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/return_reason.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/return_status.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/stock_status.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/tax_class.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/tax_rate.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/weight_class.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/localisation/zone.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/marketing/contact.php
+CODE: $this->response->redirect($this->url->link(
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/controller/marketing/coupon.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/marketing/marketing.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 112
+LINE: 216
+LINE: 322
+
+FILE: admin/controller/sale/order.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 143
+
+FILE: admin/controller/sale/recurring.php
+CODE: $this->response->redirect($this->url->link(
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/controller/sale/return.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 132
+LINE: 256
+LINE: 382
+
+FILE: admin/controller/sale/voucher.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/sale/voucher_theme.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/setting/setting.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 84
+
+FILE: admin/controller/setting/store.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 92
+LINE: 174
+LINE: 258
+
+FILE: admin/controller/user/api.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/user/user.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 100
+LINE: 192
+LINE: 286
+
+FILE: admin/controller/user/user_permission.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 103
+LINE: 195
+LINE: 289
+
+FILE: admin/controller/extension/module/account.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 85
+
+FILE: admin/controller/extension/module/amazon_login.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 92
+
+FILE: admin/controller/extension/module/amazon_pay.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 91
+
+FILE: admin/controller/extension/module/banner.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 89
+
+FILE: admin/controller/extension/module/bestseller.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 91
+
+FILE: admin/controller/extension/module/blog_category.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 88
+
+FILE: admin/controller/extension/module/blog_featured.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 95
+
+FILE: admin/controller/extension/module/blog_latest.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 94
+
+FILE: admin/controller/extension/module/cache_cleaner.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 88
+
+FILE: admin/controller/extension/module/carousel.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 89
+
+FILE: admin/controller/extension/module/category.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 85
+
+FILE: admin/controller/extension/module/featured.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 92
+
+FILE: admin/controller/extension/module/featured_article.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 94
+
+FILE: admin/controller/extension/module/featured_product.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 94
+
+FILE: admin/controller/extension/module/filter.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 85
+
+FILE: admin/controller/extension/module/google_hangouts.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 85
+
+FILE: admin/controller/extension/module/html.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 89
+
+FILE: admin/controller/extension/module/information.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 85
+
+FILE: admin/controller/extension/module/latest.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 91
+
+FILE: admin/controller/extension/module/laybuy_layout.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 85
+
+FILE: admin/controller/extension/module/live_search.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 90
+
+FILE: admin/controller/extension/module/paypal_smart_button.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 86
+
+FILE: admin/controller/extension/module/pilibaba_button.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 83
+
+FILE: admin/controller/extension/module/simple.php
+CODE: $this->response->redirect($this->url->link(
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/controller/extension/module/slideshow.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 89
+
+FILE: admin/controller/extension/module/special.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 91
+
+FILE: admin/controller/extension/module/store.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 85
+
+FILE: admin/controller/extension/module/webp.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 85
+
+FILE: admin/model/setting/setting.php
+CODE: ModelSettingSetting extends Model {
+LINE: 12
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM - Очистки кэша и логов в один клик
+
+FILE: admin/controller/common/header.php
+CODE: $data['logged'] = true;
+LINE: 58
+
+FILE: admin/view/template/common/header.twig
+CODE: <ul class="nav navbar-nav navbar-right">
+NOT FOUND - OPERATIONS ABORTED!
+CODE: <ul class="nav navbar-nav navbar-right">
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: admin/view/template/common/footer.twig
+CODE: <footer id="footer">{{ text_footer }}<br />{{ text_version }}</footer></div>
+LINE: 0
+CODE: <script src="/admin/view/javascript/jquery/noty/packaged/jquery.noty.packaged.js" type="text/javascript"></script>
+NOT FOUND - OPERATION SKIPPED!
+
+FILE: catalog/view/theme/default/template/common/footer.twig
+CODE: </body>
+LINE: 54
+
+FILE: catalog/language/en-gb/common/footer.php
+CODE: http://opencart.pro/
+NOT FOUND - OPERATIONS ABORTED!
+
+FILE: catalog/language/ru-ru/common/footer.php
+CODE: http://opencart.pro/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://myopencart.com/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://myopencart.com/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://www.opencart.com
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://www.opencart.com
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://lowenet.biz/
+NOT FOUND - OPERATIONS ABORTED!
+CODE: http://lowenet.biz/
+NOT FOUND - OPERATIONS ABORTED!
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM - Рекомендуемые товары Плюс
+CODE: if (isset($this->request->post['status']))
+LINE: 237
+CODE: <div class="form-group">
+NOT FOUND - ABORTING!

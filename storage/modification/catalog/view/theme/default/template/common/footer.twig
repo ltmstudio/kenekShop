@@ -1,6 +1,13 @@
 <footer>
   <div class="container">
     <div class="row">
+    <div class="col-sm-3">
+     <img src="{{ logo }}" alt="">
+      <p>Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy.</p>
+        <p>Powered By EK  © 2024 </p>
+    </div>
       {% if informations %}
       <div class="col-sm-3">
         <h5>{{ text_information }}</h5>
@@ -11,14 +18,6 @@
         </ul>
       </div>
       {% endif %}
-      <div class="col-sm-3">
-        <h5>{{ text_service }}</h5>
-        <ul class="list-unstyled">
-          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
-          <li><a href="{{ return }}">{{ text_return }}</a></li>
-          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
-        </ul>
-      </div>
       <div class="col-sm-3">
         <h5>{{ text_extra }}</h5>
         <ul class="list-unstyled">

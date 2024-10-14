@@ -1,4 +1,4 @@
-2024-10-14 7:27:49 - MOD: Modification Default
+2024-10-14 12:15:29 - MOD: Modification Default
 
 FILE: system/engine/action.php
 REGEX: ~(require|include)(_once)?\(([^)]+)~
@@ -27,6 +27,12 @@ FILE: system/library/template/twig.php
 CODE: if (is_file($file)) {
 LINE: 13
 ----------------------------------------------------------------
+MOD: dev-opencart.com - Newsletter Subscription
+
+FILE: catalog/view//theme/default/template/common/footer.twig
+CODE: </body>
+LINE: 54
+----------------------------------------------------------------
 MOD: Fix for twig
 CODE: $loader = new \Twig_Loader_Array(array($filename . '.twig' => $code));
 NOT FOUND - OPERATION SKIPPED!
@@ -38,6 +44,38 @@ MOD: 2 simple url rewrite
 FILE: catalog/controller/startup/startup.php
 CODE: $this->registry->set('url'
 LINE: 47
+----------------------------------------------------------------
+MOD: DEV-OPENCART.COM - Newsletter Subscription_install
+
+FILE: admin/controller/common/column_left.php
+CODE: if ($this->user->hasPermission('access', 'marketing/contact')) {
+LINE: 409
+
+FILE: admin/view/template/marketing/contact.twig
+CODE: <option value="product">{{ text_product }}</option>
+LINE: 50
+
+FILE: admin/language/en-gb/marketing/contact.php
+CODE: $_['text_product']
+LINE: 18
+
+FILE: admin/language/ru-ru/marketing/contact.php
+CODE: $_['text_product']
+LINE: 21
+
+FILE: admin/controller/marketing/contact.php
+CODE: $data['text_product'] = $this->language->get('text_product');
+NOT FOUND - OPERATIONS ABORTED!
+CODE: $email_total = $this->model_customer_customer->getTotalCustomers($customer_data);
+LINE: 94
+LINE: 108
+LINE: 123
+CODE: case 'product':
+LINE: 221
+
+FILE: admin/model/customer/customer.php
+CODE: public function getTotalCustomers($data = array()) {
+LINE: 311
 ----------------------------------------------------------------
 MOD: DEV-OPENCART.COM - Заказ в 1 клик для Opencart 3.x
 
@@ -487,6 +525,12 @@ LINE: 8
 CODE: <div class="form-group">
 LINE: 34
 
+FILE: admin/view/template/extension/module/newsletter.twig
+CODE: <i class="fa fa-save"></i></button>
+LINE: 8
+CODE: <div class="form-group">
+LINE: 33
+
 FILE: admin/view/template/extension/module/paypal_smart_button.twig
 CODE: <i class="fa fa-save"></i></button>
 LINE: 8
@@ -745,8 +789,6 @@ CODE: $this->response->redirect($this->url->link(
 LINE: 100
 LINE: 192
 LINE: 286
-
-FILE: admin/controller/marketing/contact.php
 CODE: $this->response->redirect($this->url->link(
 NOT FOUND - OPERATIONS ABORTED!
 
@@ -900,6 +942,10 @@ FILE: admin/controller/extension/module/live_search.php
 CODE: $this->response->redirect($this->url->link(
 LINE: 90
 
+FILE: admin/controller/extension/module/newsletter.php
+CODE: $this->response->redirect($this->url->link(
+LINE: 89
+
 FILE: admin/controller/extension/module/paypal_smart_button.php
 CODE: $this->response->redirect($this->url->link(
 LINE: 86
@@ -952,7 +998,7 @@ NOT FOUND - OPERATION SKIPPED!
 
 FILE: catalog/view/theme/default/template/common/footer.twig
 CODE: </body>
-LINE: 54
+LINE: 53
 CODE: http://opencart.pro/
 NOT FOUND - OPERATIONS ABORTED!
 CODE: http://opencart.pro/
@@ -1000,7 +1046,7 @@ LINE: 3
 CODE: class ControllerCommonFileManager extends Controller {
 LINE: 3
 CODE: </body>
-LINE: 54
+LINE: 53
 CODE: http://opencart.pro/
 NOT FOUND - OPERATIONS ABORTED!
 CODE: http://opencart.pro/
@@ -1952,6 +1998,16 @@ NOT FOUND - OPERATION SKIPPED!
 CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
 NOT FOUND - OPERATION SKIPPED!
 
+FILE: catalog/view/theme/default/template/extension/module/newsletter.twig
+CODE: class="breadcrumb
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: {% for i,breadcrumb in breadcrumbs %}
+NOT FOUND - OPERATION SKIPPED!
+CODE: <li><h1 class="inbreadcrumb">{{ heading_title }}</h1></li>
+NOT FOUND - OPERATION SKIPPED!
+
 FILE: catalog/view/theme/default/template/extension/module/simple.twig
 CODE: class="breadcrumb
 NOT FOUND - OPERATION SKIPPED!
@@ -2077,6 +2133,8 @@ CODE: src="{{ product.thumb }}"
 LINE: 6
 CODE: src="{{ product.thumb }}"
 LINE: 9
+CODE: src="{{ product.thumb }}"
+NOT FOUND - OPERATIONS ABORTED!
 CODE: src="{{ product.thumb }}"
 NOT FOUND - OPERATIONS ABORTED!
 CODE: src="{{ product.thumb }}"

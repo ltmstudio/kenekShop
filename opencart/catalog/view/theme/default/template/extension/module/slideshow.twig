@@ -7,8 +7,9 @@
             <div class="swiper-slide">
                 <div class="swiper-image" data-swiper-parallax-x="3%" style="background-image:url({{ banner.image }})">
                     <div class="text-container">
-                        <h1 class="bigTitle">Lorem ipsum dolor<span class="orangeIcon"></span> <br> Sit amet <span
-                                class="orangeIcon"></span> <br> Consectetur <span class="orangeIcon"></span></h1>
+                        <h1 class="bigTitle">{{ banner.title }}</h1>
+                        {# <h1 class="bigTitle">Lorem ipsum dolor<span class="orangeIcon"></span> <br> Sit amet <span
+                                class="orangeIcon"></span> <br> Consectetur <span class="orangeIcon"></span></h1> #}
                         <div class="container-arrow-button">
                             <a class="cta arrow-button" href="#">
                                 an example of link
@@ -99,7 +100,7 @@
         width: 10px;
         height: 10px;
         transform: rotate(45deg);
-        background-color: #f7970e;
+        background-color: #fff;
         display: inline-block;
         margin-left: 5px;
     }
@@ -190,7 +191,7 @@
     .home-showcase {
         padding: 0 var(--columnExt) 0;
         position: relative;
-        margin: 2rem 0 20vw;
+        margin: 2rem 0 4vw;
     }
 
     .home-showcase .home-showcaseSlider {
@@ -210,7 +211,8 @@
         padding: 5vw;
         /* width: calc(100% - (5vw*2)); */
         width: 100%;
-        height: calc(100% - (5vw*2));
+        /* height: calc(100% - (5vw*2)); */
+        min-height: 700px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -226,7 +228,7 @@
     .home-showcase .home-showcaseSlider .swiper-wrapper .swiper-slide .swiper-image .text-container .bigTitle {
         transform: translate(-140%, 0);
         transition: transform 1.15s cubic-bezier(0.58, 0, 0.28, 0.99) 0.4s;
-        color: #E2000F;
+        color: #fff;
         margin: 0 0 2.5rem;
         text-shadow: #21212121 0px 0px 5px;
     }
@@ -293,7 +295,7 @@
     }
 
     .home-showcase .home-showcaseSlider .swiper-pagination-bullet-active {
-        background-color: #f7970e;
+        background-color: #fff;
         width: 8vw;
     }
 
@@ -328,7 +330,7 @@
     .home-showcase .home-showcaseSlider .showcaseSlider-nav .showcaseSlider-prev::after,
     .home-showcase .home-showcaseSlider .showcaseSlider-nav .showcaseSlider-next::after {
         font-size: 4vw;
-        color: #f7970e;
+        color: #fff;
     }
 
     .home-showcase .home-showcaseSlider #macaron {
@@ -371,7 +373,7 @@
 
     @media (min-width: 1024px) {
         .home-showcase {
-            margin: 2rem 0 7.9vw;
+            margin: 2rem 0 3.5vw;
         }
 
         .home-showcase .home-showcaseSlider {

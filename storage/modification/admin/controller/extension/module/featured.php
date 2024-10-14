@@ -210,6 +210,31 @@ class ControllerExtensionModuleFeatured extends Controller {
 			$data['height'] = 200;
 		}
 
+
+// Featured+
+		$data['text_titles'] = $this->language->get('text_titles');
+		$data['text_shuffle'] = $this->language->get('text_shuffle');
+
+		if (isset($this->request->post['titles'])) {
+			$data['titles'] = $this->request->post['titles'];
+		} elseif (!empty($module_info) && isset($module_info['titles'])) {
+			$data['titles'] = $module_info['titles'];
+		} else {
+			$data['titles'] = array();
+		}
+
+		if (isset($this->request->post['shuffle'])) {
+			$data['shuffle'] = $this->request->post['shuffle'];
+		} elseif (!empty($module_info) && isset($module_info['shuffle'])) {
+			$data['shuffle'] = 1;
+		} else {
+			$data['shuffle'] = 0;
+		}
+
+		$this->load->model('localisation/language');
+		$data['languages'] = $this->model_localisation_language->getLanguages();
+// Featured+
+			
 		if (isset($this->request->post['status'])) {
 			$data['status'] = $this->request->post['status'];
 		} elseif (!empty($module_info)) {
